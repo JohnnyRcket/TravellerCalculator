@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 
 namespace TravellerCalculator2._0
 {
@@ -20,9 +22,7 @@ namespace TravellerCalculator2._0
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.starportModifierTableAdapter.Fill(this.database1DataSet.starportModifier);
-            this.popModifierTableAdapter.Fill(this.database1DataSet.popModifier);
-            this.techLevelModifierTableAdapter.Fill(this.database1DataSet.techLevelModifier);
+            Populate();
             sourceTechBox.SelectedItem = null;
             destinationStarportBox.SelectedItem = null;
             destinationTechBox.SelectedItem = null;
@@ -63,11 +63,11 @@ namespace TravellerCalculator2._0
             }
             else
             {
-                ErrorCatch(); 
+                ErrorCatch();
             }
-            }
+        }
 
-            private void clearButton_Click(object sender, EventArgs e)
+        private void clearButton_Click(object sender, EventArgs e)
         {
             freightList.Items.Clear();
             sourceTechBox.SelectedItem = null;
@@ -441,9 +441,64 @@ namespace TravellerCalculator2._0
             return allFilled;
         }
 
-        private void ErrorCatch() 
+        private void ErrorCatch()
         {
             MessageBox.Show("One or more fields is empty!");
+        }
+
+        public class DropdownFill
+        {
+            public string DisplayValue { get; set; }
+            public int NumericValue { get; set; }
+        }
+
+        public void Populate()
+        {
+            List<DropdownFill> popItems = new List<DropdownFill>();
+            popItems.Add(new DropdownFill { DisplayValue = "1 or less", NumericValue = -4 });
+            popItems.Add(new DropdownFill { DisplayValue = "2-5", NumericValue = 0 });
+            popItems.Add(new DropdownFill { DisplayValue = "6-7", NumericValue = 2 });
+            popItems.Add(new DropdownFill { DisplayValue = "8 or more", NumericValue = 4 });
+
+            List<DropdownFill> starportItems = new List<DropdownFill>();
+            starportItems.Add(new DropdownFill { DisplayValue = "A", NumericValue = 2 });
+            starportItems.Add(new DropdownFill { DisplayValue = "B", NumericValue = 1 });
+            starportItems.Add(new DropdownFill { DisplayValue = "C", NumericValue = 0 });
+            starportItems.Add(new DropdownFill { DisplayValue = "D", NumericValue = 0 });
+            starportItems.Add(new DropdownFill { DisplayValue = "E", NumericValue = -1 });
+            starportItems.Add(new DropdownFill { DisplayValue = "X", NumericValue = -3 });
+
+            List<DropdownFill> techItems = new List<DropdownFill>();
+            techItems.Add(new DropdownFill { DisplayValue = "6 or less", NumericValue = -1 });
+            techItems.Add(new DropdownFill { DisplayValue = "7-8", NumericValue = 0 });
+            techItems.Add(new DropdownFill { DisplayValue = "9 or more", NumericValue = 2 });
+
+            sourcePopBox.DataSource = popItems;
+            sourcePopBox.DisplayMember = "DisplayValue";
+            sourcePopBox.ValueMember = "NumericValue";
+
+            sourceStarportBox.DataSource = starportItems;
+            sourceStarportBox.DisplayMember = "DisplayValue";
+            sourceStarportBox.ValueMember = "NumericValue";
+
+            sourceTechBox.DataSource = techItems;
+            sourceTechBox.DisplayMember = "DisplayValue";
+            sourceTechBox.ValueMember = "NumericValue";
+
+            destinationPopBox.BindingContext = new BindingContext();
+            destinationPopBox.DataSource = popItems;
+            destinationPopBox.DisplayMember = "DisplayValue";
+            destinationPopBox.ValueMember = "NumericValue";
+
+            destinationStarportBox.BindingContext = new BindingContext();
+            destinationStarportBox.DataSource = starportItems;
+            destinationStarportBox.DisplayMember = "DisplayValue";
+            destinationStarportBox.ValueMember = "NumericValue";
+
+            destinationTechBox.BindingContext = new BindingContext();
+            destinationTechBox.DataSource = techItems;
+            destinationTechBox.DisplayMember = "DisplayValue";
+            destinationTechBox.ValueMember = "NumericValue";
         }
     }
 }

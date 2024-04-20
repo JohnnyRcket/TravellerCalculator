@@ -35,13 +35,6 @@
             this.distanceLabel = new System.Windows.Forms.Label();
             this.sourceRedCheckBox = new System.Windows.Forms.CheckBox();
             this.sourceAmberCheckBox = new System.Windows.Forms.CheckBox();
-            this.sourceStarportBox = new System.Windows.Forms.ComboBox();
-            this.starportModifierBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet = new TravellerCalculator2._0.Database1DataSet();
-            this.sourcePopBox = new System.Windows.Forms.ComboBox();
-            this.popModifierBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sourceTechBox = new System.Windows.Forms.ComboBox();
-            this.techLevelModifierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sourceStarportLable = new System.Windows.Forms.Label();
             this.sourcePopLabel = new System.Windows.Forms.Label();
             this.sourceTechLabel = new System.Windows.Forms.Label();
@@ -62,18 +55,9 @@
             this.destinationGroupBox = new System.Windows.Forms.GroupBox();
             this.destinationRedCheckBox = new System.Windows.Forms.CheckBox();
             this.destinationAmberCheckBox = new System.Windows.Forms.CheckBox();
-            this.destinationStarportBox = new System.Windows.Forms.ComboBox();
-            this.starportModifierBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.destinationPopBox = new System.Windows.Forms.ComboBox();
-            this.popModifierBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.destinationTechBox = new System.Windows.Forms.ComboBox();
-            this.techLevelModifierBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.destinationStarportLabel = new System.Windows.Forms.Label();
             this.destinationPopLabel = new System.Windows.Forms.Label();
             this.destinationTechLabel = new System.Windows.Forms.Label();
-            this.techLevelModifierTableAdapter = new TravellerCalculator2._0.Database1DataSetTableAdapters.techLevelModifierTableAdapter();
-            this.popModifierTableAdapter = new TravellerCalculator2._0.Database1DataSetTableAdapters.popModifierTableAdapter();
-            this.starportModifierTableAdapter = new TravellerCalculator2._0.Database1DataSetTableAdapters.starportModifierTableAdapter();
             this.ttgTabControl = new System.Windows.Forms.TabControl();
             this.entryTab = new System.Windows.Forms.TabPage();
             this.exitButton = new System.Windows.Forms.Button();
@@ -82,6 +66,13 @@
             this.resultTab = new System.Windows.Forms.TabPage();
             this.kofiLinkLabel = new System.Windows.Forms.LinkLabel();
             this.passengerGroupBox = new System.Windows.Forms.GroupBox();
+            this.basicPayResultLabel = new System.Windows.Forms.Label();
+            this.middlePayResultLabel = new System.Windows.Forms.Label();
+            this.lowPayResultLabel = new System.Windows.Forms.Label();
+            this.highPayResultLabel = new System.Windows.Forms.Label();
+            this.lowPayLabel = new System.Windows.Forms.Label();
+            this.basicPayLabel = new System.Windows.Forms.Label();
+            this.middlePayLabel = new System.Windows.Forms.Label();
             this.highPayLabel = new System.Windows.Forms.Label();
             this.basicPassageResultLabel = new System.Windows.Forms.Label();
             this.middlePassageResultLabel = new System.Windows.Forms.Label();
@@ -101,19 +92,14 @@
             this.weight = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.middlePayLabel = new System.Windows.Forms.Label();
-            this.basicPayLabel = new System.Windows.Forms.Label();
-            this.lowPayLabel = new System.Windows.Forms.Label();
-            this.basicPayResultLabel = new System.Windows.Forms.Label();
-            this.middlePayResultLabel = new System.Windows.Forms.Label();
-            this.lowPayResultLabel = new System.Windows.Forms.Label();
-            this.highPayResultLabel = new System.Windows.Forms.Label();
+            this.destinationTechBox = new System.Windows.Forms.ComboBox();
+            this.destinationPopBox = new System.Windows.Forms.ComboBox();
+            this.destinationStarportBox = new System.Windows.Forms.ComboBox();
+            this.sourceTechBox = new System.Windows.Forms.ComboBox();
+            this.sourcePopBox = new System.Windows.Forms.ComboBox();
+            this.sourceStarportBox = new System.Windows.Forms.ComboBox();
             this.sourceGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parsecNum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.starportModifierBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popModifierBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.techLevelModifierBindingSource)).BeginInit();
             this.characterGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.partyStewardNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passengerDMNumber)).BeginInit();
@@ -122,9 +108,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.sellerDMNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freightDMNumber)).BeginInit();
             this.destinationGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.starportModifierBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popModifierBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.techLevelModifierBindingSource1)).BeginInit();
             this.ttgTabControl.SuspendLayout();
             this.entryTab.SuspendLayout();
             this.resultTab.SuspendLayout();
@@ -135,14 +118,14 @@
             // 
             // sourceGroupBox
             // 
+            this.sourceGroupBox.Controls.Add(this.sourceStarportBox);
+            this.sourceGroupBox.Controls.Add(this.sourcePopBox);
+            this.sourceGroupBox.Controls.Add(this.sourceTechBox);
             this.sourceGroupBox.Controls.Add(this.isArmedCheckBox);
             this.sourceGroupBox.Controls.Add(this.parsecNum);
             this.sourceGroupBox.Controls.Add(this.distanceLabel);
             this.sourceGroupBox.Controls.Add(this.sourceRedCheckBox);
             this.sourceGroupBox.Controls.Add(this.sourceAmberCheckBox);
-            this.sourceGroupBox.Controls.Add(this.sourceStarportBox);
-            this.sourceGroupBox.Controls.Add(this.sourcePopBox);
-            this.sourceGroupBox.Controls.Add(this.sourceTechBox);
             this.sourceGroupBox.Controls.Add(this.sourceStarportLable);
             this.sourceGroupBox.Controls.Add(this.sourcePopLabel);
             this.sourceGroupBox.Controls.Add(this.sourceTechLabel);
@@ -203,59 +186,6 @@
             this.sourceAmberCheckBox.TabIndex = 6;
             this.sourceAmberCheckBox.Text = "Amber Zone";
             this.sourceAmberCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // sourceStarportBox
-            // 
-            this.sourceStarportBox.DataSource = this.starportModifierBindingSource;
-            this.sourceStarportBox.DisplayMember = "display";
-            this.sourceStarportBox.FormattingEnabled = true;
-            this.sourceStarportBox.Location = new System.Drawing.Point(98, 76);
-            this.sourceStarportBox.Name = "sourceStarportBox";
-            this.sourceStarportBox.Size = new System.Drawing.Size(66, 21);
-            this.sourceStarportBox.TabIndex = 5;
-            this.sourceStarportBox.ValueMember = "modifier";
-            // 
-            // starportModifierBindingSource
-            // 
-            this.starportModifierBindingSource.DataMember = "starportModifier";
-            this.starportModifierBindingSource.DataSource = this.database1DataSet;
-            // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sourcePopBox
-            // 
-            this.sourcePopBox.DataSource = this.popModifierBindingSource;
-            this.sourcePopBox.DisplayMember = "display";
-            this.sourcePopBox.FormattingEnabled = true;
-            this.sourcePopBox.Location = new System.Drawing.Point(98, 46);
-            this.sourcePopBox.Name = "sourcePopBox";
-            this.sourcePopBox.Size = new System.Drawing.Size(66, 21);
-            this.sourcePopBox.TabIndex = 4;
-            this.sourcePopBox.ValueMember = "modifier";
-            // 
-            // popModifierBindingSource
-            // 
-            this.popModifierBindingSource.DataMember = "popModifier";
-            this.popModifierBindingSource.DataSource = this.database1DataSet;
-            // 
-            // sourceTechBox
-            // 
-            this.sourceTechBox.DataSource = this.techLevelModifierBindingSource;
-            this.sourceTechBox.DisplayMember = "display";
-            this.sourceTechBox.FormattingEnabled = true;
-            this.sourceTechBox.Location = new System.Drawing.Point(98, 19);
-            this.sourceTechBox.Name = "sourceTechBox";
-            this.sourceTechBox.Size = new System.Drawing.Size(66, 21);
-            this.sourceTechBox.TabIndex = 3;
-            this.sourceTechBox.ValueMember = "modifier";
-            // 
-            // techLevelModifierBindingSource
-            // 
-            this.techLevelModifierBindingSource.DataMember = "techLevelModifier";
-            this.techLevelModifierBindingSource.DataSource = this.database1DataSet;
             // 
             // sourceStarportLable
             // 
@@ -423,11 +353,11 @@
             // 
             // destinationGroupBox
             // 
-            this.destinationGroupBox.Controls.Add(this.destinationRedCheckBox);
-            this.destinationGroupBox.Controls.Add(this.destinationAmberCheckBox);
             this.destinationGroupBox.Controls.Add(this.destinationStarportBox);
             this.destinationGroupBox.Controls.Add(this.destinationPopBox);
             this.destinationGroupBox.Controls.Add(this.destinationTechBox);
+            this.destinationGroupBox.Controls.Add(this.destinationRedCheckBox);
+            this.destinationGroupBox.Controls.Add(this.destinationAmberCheckBox);
             this.destinationGroupBox.Controls.Add(this.destinationStarportLabel);
             this.destinationGroupBox.Controls.Add(this.destinationPopLabel);
             this.destinationGroupBox.Controls.Add(this.destinationTechLabel);
@@ -458,54 +388,6 @@
             this.destinationAmberCheckBox.Text = "Amber Zone";
             this.destinationAmberCheckBox.UseVisualStyleBackColor = true;
             // 
-            // destinationStarportBox
-            // 
-            this.destinationStarportBox.DataSource = this.starportModifierBindingSource1;
-            this.destinationStarportBox.DisplayMember = "display";
-            this.destinationStarportBox.FormattingEnabled = true;
-            this.destinationStarportBox.Location = new System.Drawing.Point(98, 76);
-            this.destinationStarportBox.Name = "destinationStarportBox";
-            this.destinationStarportBox.Size = new System.Drawing.Size(66, 21);
-            this.destinationStarportBox.TabIndex = 5;
-            this.destinationStarportBox.ValueMember = "modifier";
-            // 
-            // starportModifierBindingSource1
-            // 
-            this.starportModifierBindingSource1.DataMember = "starportModifier";
-            this.starportModifierBindingSource1.DataSource = this.database1DataSet;
-            // 
-            // destinationPopBox
-            // 
-            this.destinationPopBox.DataSource = this.popModifierBindingSource1;
-            this.destinationPopBox.DisplayMember = "display";
-            this.destinationPopBox.FormattingEnabled = true;
-            this.destinationPopBox.Location = new System.Drawing.Point(98, 46);
-            this.destinationPopBox.Name = "destinationPopBox";
-            this.destinationPopBox.Size = new System.Drawing.Size(66, 21);
-            this.destinationPopBox.TabIndex = 4;
-            this.destinationPopBox.ValueMember = "modifier";
-            // 
-            // popModifierBindingSource1
-            // 
-            this.popModifierBindingSource1.DataMember = "popModifier";
-            this.popModifierBindingSource1.DataSource = this.database1DataSet;
-            // 
-            // destinationTechBox
-            // 
-            this.destinationTechBox.DataSource = this.techLevelModifierBindingSource1;
-            this.destinationTechBox.DisplayMember = "display";
-            this.destinationTechBox.FormattingEnabled = true;
-            this.destinationTechBox.Location = new System.Drawing.Point(98, 19);
-            this.destinationTechBox.Name = "destinationTechBox";
-            this.destinationTechBox.Size = new System.Drawing.Size(66, 21);
-            this.destinationTechBox.TabIndex = 3;
-            this.destinationTechBox.ValueMember = "modifier";
-            // 
-            // techLevelModifierBindingSource1
-            // 
-            this.techLevelModifierBindingSource1.DataMember = "techLevelModifier";
-            this.techLevelModifierBindingSource1.DataSource = this.database1DataSet;
-            // 
             // destinationStarportLabel
             // 
             this.destinationStarportLabel.AutoSize = true;
@@ -532,18 +414,6 @@
             this.destinationTechLabel.Size = new System.Drawing.Size(64, 13);
             this.destinationTechLabel.TabIndex = 0;
             this.destinationTechLabel.Text = "Tech Level:";
-            // 
-            // techLevelModifierTableAdapter
-            // 
-            this.techLevelModifierTableAdapter.ClearBeforeFill = true;
-            // 
-            // popModifierTableAdapter
-            // 
-            this.popModifierTableAdapter.ClearBeforeFill = true;
-            // 
-            // starportModifierTableAdapter
-            // 
-            this.starportModifierTableAdapter.ClearBeforeFill = true;
             // 
             // ttgTabControl
             // 
@@ -651,6 +521,69 @@
             this.passengerGroupBox.TabIndex = 2;
             this.passengerGroupBox.TabStop = false;
             this.passengerGroupBox.Text = "Passengers";
+            // 
+            // basicPayResultLabel
+            // 
+            this.basicPayResultLabel.AutoSize = true;
+            this.basicPayResultLabel.Location = new System.Drawing.Point(204, 82);
+            this.basicPayResultLabel.Name = "basicPayResultLabel";
+            this.basicPayResultLabel.Size = new System.Drawing.Size(13, 13);
+            this.basicPayResultLabel.TabIndex = 15;
+            this.basicPayResultLabel.Text = "0";
+            // 
+            // middlePayResultLabel
+            // 
+            this.middlePayResultLabel.AutoSize = true;
+            this.middlePayResultLabel.Location = new System.Drawing.Point(204, 56);
+            this.middlePayResultLabel.Name = "middlePayResultLabel";
+            this.middlePayResultLabel.Size = new System.Drawing.Size(13, 13);
+            this.middlePayResultLabel.TabIndex = 14;
+            this.middlePayResultLabel.Text = "0";
+            // 
+            // lowPayResultLabel
+            // 
+            this.lowPayResultLabel.AutoSize = true;
+            this.lowPayResultLabel.Location = new System.Drawing.Point(204, 106);
+            this.lowPayResultLabel.Name = "lowPayResultLabel";
+            this.lowPayResultLabel.Size = new System.Drawing.Size(13, 13);
+            this.lowPayResultLabel.TabIndex = 13;
+            this.lowPayResultLabel.Text = "0";
+            // 
+            // highPayResultLabel
+            // 
+            this.highPayResultLabel.AutoSize = true;
+            this.highPayResultLabel.Location = new System.Drawing.Point(204, 32);
+            this.highPayResultLabel.Name = "highPayResultLabel";
+            this.highPayResultLabel.Size = new System.Drawing.Size(13, 13);
+            this.highPayResultLabel.TabIndex = 12;
+            this.highPayResultLabel.Text = "0";
+            // 
+            // lowPayLabel
+            // 
+            this.lowPayLabel.AutoSize = true;
+            this.lowPayLabel.Location = new System.Drawing.Point(120, 106);
+            this.lowPayLabel.Name = "lowPayLabel";
+            this.lowPayLabel.Size = new System.Drawing.Size(78, 13);
+            this.lowPayLabel.TabIndex = 11;
+            this.lowPayLabel.Text = "Payment each:";
+            // 
+            // basicPayLabel
+            // 
+            this.basicPayLabel.AutoSize = true;
+            this.basicPayLabel.Location = new System.Drawing.Point(120, 82);
+            this.basicPayLabel.Name = "basicPayLabel";
+            this.basicPayLabel.Size = new System.Drawing.Size(78, 13);
+            this.basicPayLabel.TabIndex = 10;
+            this.basicPayLabel.Text = "Payment each:";
+            // 
+            // middlePayLabel
+            // 
+            this.middlePayLabel.AutoSize = true;
+            this.middlePayLabel.Location = new System.Drawing.Point(120, 56);
+            this.middlePayLabel.Name = "middlePayLabel";
+            this.middlePayLabel.Size = new System.Drawing.Size(78, 13);
+            this.middlePayLabel.TabIndex = 9;
+            this.middlePayLabel.Text = "Payment each:";
             // 
             // highPayLabel
             // 
@@ -806,68 +739,53 @@
             this.price.DisplayIndex = 2;
             this.price.Text = "Price";
             // 
-            // middlePayLabel
+            // destinationTechBox
             // 
-            this.middlePayLabel.AutoSize = true;
-            this.middlePayLabel.Location = new System.Drawing.Point(120, 56);
-            this.middlePayLabel.Name = "middlePayLabel";
-            this.middlePayLabel.Size = new System.Drawing.Size(78, 13);
-            this.middlePayLabel.TabIndex = 9;
-            this.middlePayLabel.Text = "Payment each:";
+            this.destinationTechBox.FormattingEnabled = true;
+            this.destinationTechBox.Location = new System.Drawing.Point(99, 19);
+            this.destinationTechBox.Name = "destinationTechBox";
+            this.destinationTechBox.Size = new System.Drawing.Size(65, 21);
+            this.destinationTechBox.TabIndex = 8;
             // 
-            // basicPayLabel
+            // destinationPopBox
             // 
-            this.basicPayLabel.AutoSize = true;
-            this.basicPayLabel.Location = new System.Drawing.Point(120, 82);
-            this.basicPayLabel.Name = "basicPayLabel";
-            this.basicPayLabel.Size = new System.Drawing.Size(78, 13);
-            this.basicPayLabel.TabIndex = 10;
-            this.basicPayLabel.Text = "Payment each:";
+            this.destinationPopBox.FormattingEnabled = true;
+            this.destinationPopBox.Location = new System.Drawing.Point(99, 46);
+            this.destinationPopBox.Name = "destinationPopBox";
+            this.destinationPopBox.Size = new System.Drawing.Size(65, 21);
+            this.destinationPopBox.TabIndex = 9;
             // 
-            // lowPayLabel
+            // destinationStarportBox
             // 
-            this.lowPayLabel.AutoSize = true;
-            this.lowPayLabel.Location = new System.Drawing.Point(120, 106);
-            this.lowPayLabel.Name = "lowPayLabel";
-            this.lowPayLabel.Size = new System.Drawing.Size(78, 13);
-            this.lowPayLabel.TabIndex = 11;
-            this.lowPayLabel.Text = "Payment each:";
+            this.destinationStarportBox.FormattingEnabled = true;
+            this.destinationStarportBox.Location = new System.Drawing.Point(99, 76);
+            this.destinationStarportBox.Name = "destinationStarportBox";
+            this.destinationStarportBox.Size = new System.Drawing.Size(65, 21);
+            this.destinationStarportBox.TabIndex = 10;
             // 
-            // basicPayResultLabel
+            // sourceTechBox
             // 
-            this.basicPayResultLabel.AutoSize = true;
-            this.basicPayResultLabel.Location = new System.Drawing.Point(204, 82);
-            this.basicPayResultLabel.Name = "basicPayResultLabel";
-            this.basicPayResultLabel.Size = new System.Drawing.Size(13, 13);
-            this.basicPayResultLabel.TabIndex = 15;
-            this.basicPayResultLabel.Text = "0";
+            this.sourceTechBox.FormattingEnabled = true;
+            this.sourceTechBox.Location = new System.Drawing.Point(98, 19);
+            this.sourceTechBox.Name = "sourceTechBox";
+            this.sourceTechBox.Size = new System.Drawing.Size(66, 21);
+            this.sourceTechBox.TabIndex = 11;
             // 
-            // middlePayResultLabel
+            // sourcePopBox
             // 
-            this.middlePayResultLabel.AutoSize = true;
-            this.middlePayResultLabel.Location = new System.Drawing.Point(204, 56);
-            this.middlePayResultLabel.Name = "middlePayResultLabel";
-            this.middlePayResultLabel.Size = new System.Drawing.Size(13, 13);
-            this.middlePayResultLabel.TabIndex = 14;
-            this.middlePayResultLabel.Text = "0";
+            this.sourcePopBox.FormattingEnabled = true;
+            this.sourcePopBox.Location = new System.Drawing.Point(98, 46);
+            this.sourcePopBox.Name = "sourcePopBox";
+            this.sourcePopBox.Size = new System.Drawing.Size(66, 21);
+            this.sourcePopBox.TabIndex = 12;
             // 
-            // lowPayResultLabel
+            // sourceStarportBox
             // 
-            this.lowPayResultLabel.AutoSize = true;
-            this.lowPayResultLabel.Location = new System.Drawing.Point(204, 106);
-            this.lowPayResultLabel.Name = "lowPayResultLabel";
-            this.lowPayResultLabel.Size = new System.Drawing.Size(13, 13);
-            this.lowPayResultLabel.TabIndex = 13;
-            this.lowPayResultLabel.Text = "0";
-            // 
-            // highPayResultLabel
-            // 
-            this.highPayResultLabel.AutoSize = true;
-            this.highPayResultLabel.Location = new System.Drawing.Point(204, 32);
-            this.highPayResultLabel.Name = "highPayResultLabel";
-            this.highPayResultLabel.Size = new System.Drawing.Size(13, 13);
-            this.highPayResultLabel.TabIndex = 12;
-            this.highPayResultLabel.Text = "0";
+            this.sourceStarportBox.FormattingEnabled = true;
+            this.sourceStarportBox.Location = new System.Drawing.Point(98, 76);
+            this.sourceStarportBox.Name = "sourceStarportBox";
+            this.sourceStarportBox.Size = new System.Drawing.Size(66, 21);
+            this.sourceStarportBox.TabIndex = 13;
             // 
             // ttgForm
             // 
@@ -881,10 +799,6 @@
             this.sourceGroupBox.ResumeLayout(false);
             this.sourceGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parsecNum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.starportModifierBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popModifierBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.techLevelModifierBindingSource)).EndInit();
             this.characterGroupBox.ResumeLayout(false);
             this.characterGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.partyStewardNumber)).EndInit();
@@ -895,9 +809,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.freightDMNumber)).EndInit();
             this.destinationGroupBox.ResumeLayout(false);
             this.destinationGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.starportModifierBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popModifierBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.techLevelModifierBindingSource1)).EndInit();
             this.ttgTabControl.ResumeLayout(false);
             this.entryTab.ResumeLayout(false);
             this.resultTab.ResumeLayout(false);
@@ -916,9 +827,6 @@
         private System.Windows.Forms.GroupBox sourceGroupBox;
         private System.Windows.Forms.GroupBox characterGroupBox;
         private System.Windows.Forms.CheckBox sourceAmberCheckBox;
-        private System.Windows.Forms.ComboBox sourceStarportBox;
-        private System.Windows.Forms.ComboBox sourcePopBox;
-        private System.Windows.Forms.ComboBox sourceTechBox;
         private System.Windows.Forms.Label sourceStarportLable;
         private System.Windows.Forms.Label sourcePopLabel;
         private System.Windows.Forms.Label sourceTechLabel;
@@ -926,19 +834,9 @@
         private System.Windows.Forms.GroupBox destinationGroupBox;
         private System.Windows.Forms.CheckBox destinationRedCheckBox;
         private System.Windows.Forms.CheckBox destinationAmberCheckBox;
-        private System.Windows.Forms.ComboBox destinationStarportBox;
-        private System.Windows.Forms.ComboBox destinationPopBox;
-        private System.Windows.Forms.ComboBox destinationTechBox;
         private System.Windows.Forms.Label destinationStarportLabel;
         private System.Windows.Forms.Label destinationPopLabel;
         private System.Windows.Forms.Label destinationTechLabel;
-        private Database1DataSet database1DataSet;
-        private System.Windows.Forms.BindingSource techLevelModifierBindingSource;
-        private Database1DataSetTableAdapters.techLevelModifierTableAdapter techLevelModifierTableAdapter;
-        private System.Windows.Forms.BindingSource popModifierBindingSource;
-        private Database1DataSetTableAdapters.popModifierTableAdapter popModifierTableAdapter;
-        private System.Windows.Forms.BindingSource starportModifierBindingSource;
-        private Database1DataSetTableAdapters.starportModifierTableAdapter starportModifierTableAdapter;
         private System.Windows.Forms.TabControl ttgTabControl;
         private System.Windows.Forms.TabPage entryTab;
         private System.Windows.Forms.TabPage resultTab;
@@ -948,9 +846,6 @@
         private System.Windows.Forms.Button generateButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button clearButton;
-        private System.Windows.Forms.BindingSource starportModifierBindingSource1;
-        private System.Windows.Forms.BindingSource popModifierBindingSource1;
-        private System.Windows.Forms.BindingSource techLevelModifierBindingSource1;
         private System.Windows.Forms.GroupBox freightGroupBox;
         private System.Windows.Forms.ListView freightList;
         private System.Windows.Forms.ColumnHeader number;
@@ -992,6 +887,12 @@
         private System.Windows.Forms.Label middlePayResultLabel;
         private System.Windows.Forms.Label lowPayResultLabel;
         private System.Windows.Forms.Label highPayResultLabel;
+        private System.Windows.Forms.ComboBox destinationStarportBox;
+        private System.Windows.Forms.ComboBox destinationPopBox;
+        private System.Windows.Forms.ComboBox destinationTechBox;
+        private System.Windows.Forms.ComboBox sourceTechBox;
+        private System.Windows.Forms.ComboBox sourceStarportBox;
+        private System.Windows.Forms.ComboBox sourcePopBox;
     }
 }
 
